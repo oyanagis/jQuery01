@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+<!--    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+    <script src="./jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <h1>jQueryの練習</h1>
+     <div id="main">
+		<p>これは練習です。こちらは、<a href="http://google.com/">リンク</a>です。</p>
+		<ul id="menu">
+			<li>0番</li>
+			<li class="listitem">1番</li>
+			<li class="listitem">2番</li>
+			<li><a href="http://yahoo.com/">3番</a></li>
+		</ul>
+	</div><!-- /main -->
+	<script>
+		$(document).ready(function() {
+			// jQueryのコードはこちらに
+			// フィルタ
+			// li要素の一番
+			//$('li:first').css('color', 'red');
+			// li要素の最後
+			//$('li:last').css('color', 'red');
+			// li要素の偶数
+			//$('li:even').css('color', 'red');
+			// li要素の一番
+			//$('li:odd').css('color', 'red');
+			// li要素の２番
+			//$('li:eq(2)').css('color', 'red');
+			// li要素の2番より大きい
+			//$('li:gt(2)').css('color', 'red');
+			// li要素の一番
+			$('li:contains("2番")').css('color', 'red');
+		});
+	
+	</script>
+</body>
+</html>

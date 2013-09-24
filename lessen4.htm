@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+<!--    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+    <script src="./jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <h1>jQueryの練習</h1>
+     <div id="main">
+		<p>これは練習です。こちらは、<a href="http://google.com/">リンク</a>です。</p>
+		<ul id="menu">
+			<li>0番</li>
+			<li class="listitem">1番</li>
+			<li class="listitem">2番</li>
+			<li><a href="http://yahoo.com/">3番</a></li>
+		</ul>
+	</div><!-- /main -->
+	<script>
+		$(document).ready(function() {
+			// jQueryのコードはこちらに
+			// セレクタ.メソッド
+			// メソッドチェーン
+			//$('h1').css('color', 'red').hide('slow');
+			// html要素 h1 p img
+			//$('h1').css('color', 'red');
+			// id要素 #
+			//$('#main').css('color', 'red');
+			// class要素 .
+			//$('.listitem').css('color', 'red');
+			// 複数の要素 ,
+			//$('.listitem, h1').css('color', 'red');
+			// 親子要素 > ※直下のもののみ、孫とかは無視
+			$('ul>li').css('color', 'red');
+			// 子孫要素  （スペース）
+			$('#main a').css('color', 'red');
+		});
+	
+	</script>
+</body>
+</html>

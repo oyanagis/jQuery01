@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+<!--    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+    <script src="./jquery-1.10.2.min.js"></script>
+    <style>
+		.font36 {
+			font-size:36px;
+		}
+    </style>
+</head>
+<body>
+    <h1>jQueryの練習</h1>
+     <div id="main">
+		<p>これは練習です。こちらは、<a href="http://google.com/">リンク</a>です。</p>
+		<ul id="menu">
+			<li>0番</li>
+			<li class="listitem">1番</li>
+			<li class="listitem">2番</li>
+			<li><a href="http://yahoo.com/">3番</a></li>
+		</ul>
+	<input type="text" value="子猫" id="search"> <input type="submit" value="検索">
+	</div><!-- /main -->
+	<script>
+		$(document).ready(function() {
+			// セレクタ.メソッド
+			// .mouseover, .mouseout, .hover
+			/*
+			$('li').mouseover(function() {
+				$(this).addClass('font36');
+			})
+			.mouseout(function() {
+				$(this).removeClass('font36');
+			});
+			*/
+			
+			$('li').hover(
+				function() {
+					$(this).addClass('font36');
+				},
+				function() {
+					$(this).removeClass('font36');
+				}
+			);
+			
+			//console.log($('#search').val());
+		});
+	
+	</script>
+</body>
+</html>

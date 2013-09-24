@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習</title>
+<!--    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+    <script src="./jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<h1>jQueryの練習</h1>
+	<div id="main"></div>
+	<input type="button" value="Ajax" id="kick_ajax">
+	<script>
+		$(function() {
+			// Ajax
+			$('#kick_ajax').click(function() {
+				$('#main').load('contents.txt', function() {
+					alert('読み込み終了');
+				});
+			});
+		});
+	
+	</script>
+</body>
+</html>
